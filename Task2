@@ -1,0 +1,19 @@
+# To create a Random Password Genarator
+
+import random
+import string
+
+print("Welcome to our Random Password Generator")
+
+length = int(input("Enter the length of password you want: "))
+
+lowercase_L = string.ascii_lowercase
+uppercase_L = string.ascii_uppercase
+digits = string.digits
+symbols = string.punctuation
+
+characters = lowercase_L + uppercase_L + digits + symbols
+
+password = ''.join(random.choice(characters) for _ in range(length))
+
+print(f"Generated password: {password}")
